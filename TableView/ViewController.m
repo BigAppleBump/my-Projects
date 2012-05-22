@@ -7,58 +7,128 @@
 //
 
 #import "ViewController.h"
+#import "DetailViewController.h"
+#import "AppDelegate.h"
 
 @implementation ViewController
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
-}
+//@synthesize  tableData;
 
-#pragma mark - View lifecycle
 
+
+//#pragma mark - View lifecycle
+/*
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.tableData = [NSArray arrayWithObjects:@"John",@"paul",@"George",@"Ringo",nil];
+
+	
+}
+*/
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+	
+	//Initialize the array.
+	listOfItems = [[NSMutableArray alloc] init];
+	
+	//Add items
+	[listOfItems addObject:@"Iceland"];
+	[listOfItems addObject:@"Greenland"];
+	[listOfItems addObject:@"Switzerland"];
+	[listOfItems addObject:@"Norway"];
+	[listOfItems addObject:@"New Zealand"];
+	[listOfItems addObject:@"Greece"];
+	[listOfItems addObject:@"Italy"];
+	[listOfItems addObject:@"Ireland"];
+	
+	//Set the title
+	self.navigationItem.title = @"Countries";
 }
 
-- (void)viewDidUnload
+ 
+//#pragma mark = TableView Data Source methods
+
+/*
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+
 {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    return [tableData count];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
 
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
-}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 
-- (void)viewDidDisappear:(BOOL)animated
 {
-	[super viewDidDisappear:animated];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-    } else {
-        return YES;
+    UITableViewCell *cell = nil;
+    
+    cell = [tableView dequeueReusableCellWithIdentifier:@"MyCell"];
+    
+    if(cell == nil)
+    {
+        cell =[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MyCell"];
+    
     }
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%@",[tableData objectAtIndex:indexPath.row]];
+    
+    return  cell;
+}
+
+
+ */
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    
+    if (cell == nil) 
+    {
+        cell =[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MyCell"];   
+    }
+    
+    // Set up the cell...
+	NSString *cellValue = [listOfItems objectAtIndex:indexPath.row];
+	cell.text = cellValue;
+    
+    return cell;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	
+	//Get the selected country
+	NSString *selectedCountry = [listOfItems objectAtIndex:indexPath.row];
+	
+	//Initialize the detail view controller and display it.
+	DetailViewController *dvController = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:[NSBundle mainBundle]];
+	dvController.selectedCountry = selectedCountry;
+	[self.navigationController pushViewController:dvController animated:YES];
+	[dvController release];
+	dvController = nil;
+}
+
+- (UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath {
+	
+	//return UITableViewCellAccessoryDetailDisclosureButton;
+	return UITableViewCellAccessoryDisclosureIndicator;
+}
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+	
+	[self tableView:tableView didSelectRowAtIndexPath:indexPath];
+}
+
+- (void)dealloc {
+	
+	[listOfItems release];
+    [super dealloc];
 }
 
 @end

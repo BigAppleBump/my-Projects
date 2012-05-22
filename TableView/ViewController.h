@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITableViewDataSource>
+
+{
+    //NSArray *tableData;
+    NSMutableArray *listOfItems;
+
+}
+//@property (nonatomic, retain) NSArray *tableData;
 
 @end

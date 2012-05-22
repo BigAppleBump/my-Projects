@@ -21,6 +21,8 @@
 		C1A731F414C3181E00F2AB90 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A731D214C3181D00F2AB90 /* Foundation.framework */; };
 		C1A731FC14C3181E00F2AB90 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C1A731FA14C3181E00F2AB90 /* InfoPlist.strings */; };
 		C1A731FF14C3181E00F2AB90 /* TableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A731FE14C3181E00F2AB90 /* TableViewTests.m */; };
+		C1CB4DFA14C3D5580079DA50 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CB4DF814C3D5580079DA50 /* DetailViewController.m */; };
+		C1CB4DFB14C3D5580079DA50 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1CB4DF914C3D5580079DA50 /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,22 +40,25 @@
 		C1A731D014C3181D00F2AB90 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C1A731D214C3181D00F2AB90 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C1A731D414C3181D00F2AB90 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C1A731D814C3181D00F2AB90 /* TableView-Info.plist */ = {isa = PBXFileReference; path = "TableView-Info.plist"; sourceTree = "<group>"; };
+		C1A731D814C3181D00F2AB90 /* TableView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TableView-Info.plist"; sourceTree = "<group>"; };
 		C1A731DA14C3181D00F2AB90 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C1A731DC14C3181D00F2AB90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C1A731DE14C3181D00F2AB90 /* TableView-Prefix.pch */ = {isa = PBXFileReference; path = "TableView-Prefix.pch"; sourceTree = "<group>"; };
-		C1A731DF14C3181D00F2AB90 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		C1A731DE14C3181D00F2AB90 /* TableView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TableView-Prefix.pch"; sourceTree = "<group>"; };
+		C1A731DF14C3181D00F2AB90 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C1A731E014C3181D00F2AB90 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C1A731E314C3181D00F2AB90 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		C1A731E614C3181E00F2AB90 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		C1A731E814C3181E00F2AB90 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		C1A731E814C3181E00F2AB90 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C1A731E914C3181E00F2AB90 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C1A731F014C3181E00F2AB90 /* TableViewTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1A731F114C3181E00F2AB90 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		C1A731F914C3181E00F2AB90 /* TableViewTests-Info.plist */ = {isa = PBXFileReference; path = "TableViewTests-Info.plist"; sourceTree = "<group>"; };
+		C1A731F914C3181E00F2AB90 /* TableViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TableViewTests-Info.plist"; sourceTree = "<group>"; };
 		C1A731FB14C3181E00F2AB90 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C1A731FD14C3181E00F2AB90 /* TableViewTests.h */ = {isa = PBXFileReference; path = TableViewTests.h; sourceTree = "<group>"; };
+		C1A731FD14C3181E00F2AB90 /* TableViewTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewTests.h; sourceTree = "<group>"; };
 		C1A731FE14C3181E00F2AB90 /* TableViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewTests.m; sourceTree = "<group>"; };
+		C1CB4DF714C3D5580079DA50 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		C1CB4DF814C3D5580079DA50 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		C1CB4DF914C3D5580079DA50 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +125,9 @@
 				C1A731E814C3181E00F2AB90 /* ViewController.h */,
 				C1A731E914C3181E00F2AB90 /* ViewController.m */,
 				C1A731D714C3181D00F2AB90 /* Supporting Files */,
+				C1CB4DF714C3D5580079DA50 /* DetailViewController.h */,
+				C1CB4DF814C3D5580079DA50 /* DetailViewController.m */,
+				C1CB4DF914C3D5580079DA50 /* DetailViewController.xib */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -228,6 +236,7 @@
 				C1A731DB14C3181D00F2AB90 /* InfoPlist.strings in Resources */,
 				C1A731E414C3181D00F2AB90 /* MainStoryboard_iPhone.storyboard in Resources */,
 				C1A731E714C3181E00F2AB90 /* MainStoryboard_iPad.storyboard in Resources */,
+				C1CB4DFB14C3D5580079DA50 /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +274,7 @@
 				C1A731DD14C3181D00F2AB90 /* main.m in Sources */,
 				C1A731E114C3181D00F2AB90 /* AppDelegate.m in Sources */,
 				C1A731EA14C3181E00F2AB90 /* ViewController.m in Sources */,
+				C1CB4DFA14C3D5580079DA50 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +382,7 @@
 		C1A7320314C3181E00F2AB90 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TableView/TableView-Prefix.pch";
 				INFOPLIST_FILE = "TableView/TableView-Info.plist";
@@ -383,6 +394,7 @@
 		C1A7320414C3181E00F2AB90 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TableView/TableView-Prefix.pch";
 				INFOPLIST_FILE = "TableView/TableView-Info.plist";
@@ -444,6 +456,7 @@
 				C1A7320414C3181E00F2AB90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C1A7320514C3181E00F2AB90 /* Build configuration list for PBXNativeTarget "TableViewTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +465,7 @@
 				C1A7320714C3181E00F2AB90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
